@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { v4 as uuid } from 'uuid';
+import './App.css'
+
+const initialFriends = [
+  { id: uuid(), fname: 'John', lname: 'Smith' },
+  { id: uuid(), fname: 'Jane', lname: 'Doe' },
+]
 
 function App() {
+  const [friends, setFriends] = useState(initialFriends)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Make a form to add friends! */}
+
+      <h3>List of friends:</h3>
+      {
+        friends.map(fr => <div key={fr.id}>{fr.fname} {fr.lname}</div>)
+      }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
