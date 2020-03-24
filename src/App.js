@@ -34,6 +34,13 @@ function App() {
     // stop the form from reloading the page on submit
     event.preventDefault()
     // let's add a new friend to the friedns array in state
+    // let's make a new friend
+    const newFriend = {
+      id: uuid(),
+      fname: formValues.fname,
+      lname: formValues.lname,
+    }
+    setFriends([ ...friends, newFriend ]) // WE NEED TO PASS AN ENTIRE ARRAY
   }
 
   return (
