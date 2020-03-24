@@ -64,7 +64,9 @@ function App() {
             name='lname'
             type='text'
           />
-        </label>
+        </label><br />
+
+        <input type='submit' />
       </form>
 
       <h3>List of friends:</h3>
