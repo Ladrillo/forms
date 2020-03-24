@@ -47,33 +47,43 @@ function App() {
   return (
     <div className="App">
       {/* Make a form to add friends!!!!!!!! */}
-      <form onSubmit={onFormSubmit}>
-        <label> first name
-          <input
-            onChange={onInputChange} // callback takes an event object
-            value={formValues.fname}
-            name='fname'
-            type='text'
-          />
-        </label><br/>
-
-        <label> Last name
-          <input
-            onChange={onInputChange}
-            value={formValues.lname}
-            name='lname'
-            type='text'
-          />
-        </label><br />
-
-        <input type='submit' />
-      </form>
+      <Form
+        onInputChange={onInputChange}
+        formValues={formValues}
+        onFormSubmit={onFormSubmit}
+      />
 
       <h3>List of friends:</h3>
       {
         friends.map(fr => <div key={fr.id}>{fr.fname} {fr.lname}</div>)
       }
     </div>
+  )
+}
+
+function Form(props) {
+  return (
+    <form onSubmit={props.onFormSubmit}>
+      <label> first name
+      <input
+          onChange={props.onInputChange} // callback takes an event object
+          value={props.formValues.fname}
+          name='fname'
+          type='text'
+        />
+      </label><br />
+
+      <label> Last name
+      <input
+          onChange={props.onInputChange}
+          value={props.formValues.lname}
+          name='lname'
+          type='text'
+        />
+      </label><br />
+
+      <input type='submit' />
+    </form>
   )
 }
 
