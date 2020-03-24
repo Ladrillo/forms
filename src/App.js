@@ -40,7 +40,8 @@ function App() {
       fname: formValues.fname,
       lname: formValues.lname,
     }
-    setFriends([ ...friends, newFriend ]) // WE NEED TO PASS AN ENTIRE ARRAY
+    setFriends([...friends, newFriend]) // WE NEED TO PASS AN ENTIRE ARRAY
+    // setFriends(friends.concat(newFriend))
   }
 
   return (
