@@ -12,12 +12,12 @@ function App() {
   // so it's an EXCELLENT place to put
   // all of our slices of state
   const [friends, setFriends] = useState(initialFriends)
-  const [fnameValue, setFnameValue] = useState('')
-  const onFNameChange = event => {
-    // we are going to update app state
-    // with the new value of the input
-    // ???????????????????????????????
-    setFnameValue(event.target.value)
+  const [formValues, setFormValues] = useState({
+    fname: '',
+    lname: '',
+  })
+  const onInputChange = event => {
+    // does things
   }
 
   return (
@@ -26,8 +26,8 @@ function App() {
       <form>
         <label> first name
           <input
-            onChange={onFNameChange} // callback takes an event object
-            value={fnameValue}
+            onChange={onInputChange} // callback takes an event object
+            value={formValues.fname}
             name='fname'
             type='text'
           />
