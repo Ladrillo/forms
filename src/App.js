@@ -20,6 +20,7 @@ function App() {
       <form>
         <label> first name
           <input
+            value={fnameValue}
             name='fname'
             type='text'
           />
