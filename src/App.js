@@ -8,6 +8,9 @@ const initialFriends = [
 ]
 
 function App() {
+  // App it the top-level component
+  // so it's an EXCELLENT place to put
+  // all of our slices of state
   const [friends, setFriends] = useState(initialFriends)
 
   return (
