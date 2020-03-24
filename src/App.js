@@ -18,14 +18,15 @@ function App() {
   })
   const onInputChange = event => {
     // use the event object
-    // to fish out the current value
-    // and replace the WHOLE formValues object
-    // with a new one that's a copy of the old one
-    // BUT with a little override
+    // to fish out WHICH input is having the change event
     const inputThatChanged = event.target.name
+    // to fish out the current value
     const newValueForInput = event.target.value
+    // and replace the WHOLE formValues object
     setFormValues({
+      // with a new one that's a copy of the old one
       ...formValues,
+      // BUT with a little override
       [inputThatChanged]: newValueForInput,
     })
   }
