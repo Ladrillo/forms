@@ -16,6 +16,14 @@ function App() {
   return (
     <div className="App">
       {/* Make a form to add friends!!!!!!!! */}
+      <form>
+        <label> first name
+          <input
+            name='fname'
+            type='text'
+          />
+        </label>
+      </form>
 
       <h3>List of friends:</h3>
       {
