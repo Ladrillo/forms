@@ -12,6 +12,7 @@ function App() {
   // so it's an EXCELLENT place to put
   // all of our slices of state
   const [friends, setFriends] = useState(initialFriends)
+  const [fnameValue, setFnameValue] = useState('')
 
   return (
     <div className="App">
