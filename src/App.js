@@ -13,6 +13,10 @@ function App() {
   // all of our slices of state
   const [friends, setFriends] = useState(initialFriends)
   const [fnameValue, setFnameValue] = useState('')
+  const onFNameChange = event => {
+    // we are going to update app state
+    // with the new value of the input
+  }
 
   return (
     <div className="App">
@@ -20,7 +24,7 @@ function App() {
       <form>
         <label> first name
           <input
-            onChange={onFNameChange}
+            onChange={onFNameChange} // callback takes an event object
             value={fnameValue}
             name='fname'
             type='text'
