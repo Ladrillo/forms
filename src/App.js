@@ -30,11 +30,15 @@ function App() {
       [inputThatChanged]: newValueForInput,
     })
   }
+  const onFormSubmit = event => {
+    // stop the form from reloading the page on submit
+    
+  }
 
   return (
     <div className="App">
       {/* Make a form to add friends!!!!!!!! */}
-      <form>
+      <form onSubmit={onFormSubmit}>
         <label> first name
           <input
             onChange={onInputChange} // callback takes an event object
