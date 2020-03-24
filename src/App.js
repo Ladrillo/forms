@@ -43,6 +43,15 @@ function App() {
             type='text'
           />
         </label>
+
+        <label> Last name
+          <input
+            onChange={onInputChange}
+            value={formValues.lname}
+            name='lname'
+            type='text'
+          />
+        </label>
       </form>
 
       <h3>List of friends:</h3>
