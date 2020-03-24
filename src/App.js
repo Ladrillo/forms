@@ -32,7 +32,8 @@ function App() {
   }
   const onFormSubmit = event => {
     // stop the form from reloading the page on submit
-    
+    event.preventDefault()
+    // let's add a new friend to the friedns array in state
   }
 
   return (
@@ -46,7 +47,7 @@ function App() {
             name='fname'
             type='text'
           />
-        </label>
+        </label><br/>
 
         <label> Last name
           <input
